@@ -1,0 +1,30 @@
+{
+  "name": "better-console",
+  "version": "1.0.0",
+  "description": "Your console is 10x better with better-console's logger and colors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fluxbot-eu/better-console.git"
+  },
+  "keywords": [
+    "console",
+    "better",
+    "betterconsole",
+    "logger",
+    "consolecolors",
+    "colors"
+  ],
+  "author": "FluxBot.eu",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fluxbot-eu/better-console/issues"
+  },
+  "homepage": "https://github.com/fluxbot-eu/better-console#readme",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
+}
