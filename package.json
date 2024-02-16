@@ -1,11 +1,12 @@
 {
-  "name": "better-console",
+  "name": "@fluxbot/better-console",
   "version": "1.0.0",
   "description": "Your console is 10x better with better-console's logger and colors",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fluxbot-eu/better-console.git"
