@@ -1,4 +1,4 @@
-const { ConsoleConfig, ConsoleLogger, FileLogger, Colors } = require("../dist")
+const { ConsoleConfig, ConsoleLogger, FileLogger, Colors } = require("../")
 const path = require("path")
 
 let config = new ConsoleConfig()
