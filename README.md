@@ -7,6 +7,16 @@ You can see the guide that explains how to use better-console on the [wiki page]
 ## Example of use:
 
 ```javascript
+const log = new ConsoleLogger(
+    new ConsoleConfig()
+        .setFileLogger(
+            new FileLogger(
+                path.join("./logs/logs.log")
+            )
+        )
+)
+
+
 log.info("hello world")
 log.success("hello world")
 log.warn("hello world")
