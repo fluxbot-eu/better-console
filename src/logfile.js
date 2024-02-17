@@ -1,13 +1,13 @@
 import * as fs from 'fs';
 
 export class FileLogger {
-    path: string;
+    path;
 
-    constructor(path: string) {
+    constructor(path) {
         this.path = path;
     }
 
-    update(string: string) {
+    addString(string) {
         fs.appendFileSync(this.path, string)
     }
 }

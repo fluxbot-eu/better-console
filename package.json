@@ -1,12 +1,21 @@
 {
   "name": "@fluxbot/better-console",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Your console is 10x better with better-console's logger and colors",
-  "main": "src/index.js",
+  
+  "files": ["build", "README.md", "LICENSE"],
+
+  "main": "./build/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./build/index.d.ts",
+  "exports": {
+    "types": "./build/index.d.ts",
+    "import": "./build/index.mjs",
+    "require": "./build/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fluxbot-eu/better-console.git"
@@ -24,8 +33,5 @@
   "bugs": {
     "url": "https://github.com/fluxbot-eu/better-console/issues"
   },
-  "homepage": "https://github.com/fluxbot-eu/better-console#readme",
-  "devDependencies": {
-    "typescript": "^5.3.3"
-  }
+  "homepage": "https://github.com/fluxbot-eu/better-console#readme"
 }
