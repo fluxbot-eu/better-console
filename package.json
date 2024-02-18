@@ -1,12 +1,12 @@
 {
   "name": "@fluxbot/better-console",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Your console is 10x better with better-console's logger and colors",
 
   "files": ["build", "README.md", "LICENSE"],
 
   "main": "./build/index.js",
-  "module": "./dist/index.mjs",
+  "module": "./build/index.mjs",
   "types": "./build/index.d.ts",
   "exports": {
     "types": "./build/index.d.ts",
