@@ -22,22 +22,40 @@ export class ConsoleLogger {
     
     parseDisplay(color, type, msgs) {
         let display = this.getDisplay()
+
+        let msg = msgs.map(msg => {
+            if(typeof msg === "object") {
+                return JSON.stringify(msg)
+            } else {
+                return msg
+            }
+        })
+
         display = display.replace(/{\|}/g, `${color}┃${ColorObject.Close}`)
             .replace(/{:}/g, `${ColorObject.Grey}:${ColorObject.Close}`)
             .replace(/{ts}/g, `${ColorObject.Grey}${new Date().toLocaleString()}${ColorObject.Close}`)
             .replace(/{type}/g, `${ColorObject.Grey}[${ColorObject.Close}${color}${type}${ColorObject.Close}${ColorObject.Grey}]${ColorObject.Close}`)
-            .replace(/{msgs}/g, ColorObject.Reset + msgs.join(", "))
+            .replace(/{msgs}/g, ColorObject.Reset + msg.join(" "))
 
         return display;
     }
 
     parseDisplayNoColor(type, msgs) {
         let display = this.getDisplay()
+
+        let msg = msgs.map(msg => {
+            if(typeof msg === "object") {
+                return JSON.stringify(msg)
+            } else {
+                return msg
+            }
+        })
+
         display = display.replace(/{\|}/g, `┃`)
             .replace(/{:}/g, `:`)
             .replace(/{ts}/g, `${new Date().toLocaleString()}`)
             .replace(/{type}/g, `[${type}]`)
-            .replace(/{msgs}/g, msgs.join(", "))
+            .replace(/{msgs}/g, msg.join(" "))
 
         return display;
     }
